@@ -13,6 +13,13 @@ public class UIChatGPT : MonoBehaviour
     private TextMeshProUGUI _resultText;
     [SerializeField]
     private Button _sendButton;
+    [SerializeField]
+    private GameObject _loadingIcon;
+
+    public void ShowLoadingIcon(bool show)
+    {
+        _loadingIcon.SetActive(show);
+    }
 
     public void EnableSendButton(bool enable)
     {
@@ -26,8 +33,19 @@ public class UIChatGPT : MonoBehaviour
 
     public void ShowResponse(string response)
     {
-        _resultText.text = response;
+        _resultText.text = "";
+        StopAllCoroutines();
+        StartCoroutine(ShowResponseTextAnimated(response, 0.02f));
     }
 
     public string GetInputFieldPrompt() => _inputFieldPrompt.text;
+
+    private IEnumerator ShowResponseTextAnimated(string response, float betweenTime)
+    {
+        for (int i = 0; i < response.Length; i++)
+        {
+            _resultText.text = string.Concat(_resultText.text, response[i]);
+            yield return new WaitForSeconds(betweenTime);
+        }
+    }
 }

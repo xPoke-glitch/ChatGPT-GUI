@@ -43,6 +43,7 @@ public static class OpenAIUtil
 
             // Response extraction
             var json = post.downloadHandler.text;
+            Debug.Log(json);
             var data = JsonUtility.FromJson<OpenAI.Response>(json);
 
             // Callback

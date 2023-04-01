@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9fccbf723607040bf1ae3120af3f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKey: 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
+  apiKey: 
   timeout: 30000
