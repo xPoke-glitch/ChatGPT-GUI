@@ -3,7 +3,7 @@
 
 A ChatGPT GUI made with Unity
 
-
+<img src="https://github.com/xPoke-glitch/ChatGPT-GUI/blob/main/Screenshots/example.gif" width="750">
 
 ## Requirements
 
