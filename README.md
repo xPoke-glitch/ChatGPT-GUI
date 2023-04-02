@@ -10,7 +10,7 @@ A ChatGPT GUI made with Unity
 If you want to open, edit or see the Unity project:
 * Unity 2022.2.12f1 (or greater)
 
-## How to play
+## How to use
 
 Set your ChatGPT API Key in the Unity Project Settings and then execute the project!
 
